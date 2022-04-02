@@ -200,5 +200,6 @@ b.innerText = 'Read Now 3'
 document.getElementById('gd5').appendChild(b);
 
 var c = document.createElement('div', { 'style': 'position: fixed; bottom: 0; width: 100%; background: black; color: white' });
+c.innerText = 'Testing message';
 document.body.appendChild(c);
 
