@@ -20,6 +20,7 @@ b.onclick=function() {
         s.onload = s.onreadystatechange = function() {
             if (!done && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")) {
                 done = true;
+                alert("loaded jquery");
                 _main();
             }
         }
@@ -80,6 +81,7 @@ b.onclick=function() {
 
     // Our code will go here.
     function main() {
+        alert('main');
         var images = $('#gdt').find('img'),
             total = images.length,
             complete = 0,
@@ -176,7 +178,6 @@ b.onclick=function() {
                     });
                 }
             }
-            //console.log(items);
             // define options (if needed)
             var options = {
                 // optionName: 'option value'
@@ -187,8 +188,6 @@ b.onclick=function() {
             // Initializes and opens PhotoSwipe
             gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
             gallery.init();
-            //window.gallery = gallery;
-            //console.log('Everything\'s good');
         }
     }
 }(window.jQuery));
