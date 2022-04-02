@@ -1,8 +1,6 @@
 const body = $response.body + `var b = document.createElement('button');
 b.onclick=function() {
 (function($) {
-    "use strict";
-
     var PRELOAD = true;
 
     if (typeof window.photoswipe !== 'undefined')
@@ -192,7 +190,7 @@ b.onclick=function() {
     }
 }(window.jQuery));
 };
-b.innerText = 'Read Now 2'
+b.innerText = 'Read Now 3'
 document.getElementById('gd5').appendChild(b);`
 
 $done({ body })
