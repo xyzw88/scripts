@@ -303,7 +303,7 @@ app.controller('parentCtrl',
                     $scope.commentShowPic = true;
                 }
                 if (data) {
-                    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                    if(/Android|webOS|iPhone|iPad|Macintosh|iPod|BlackBerry/i.test(navigator.userAgent)) {
                         //说明是移动端
                         if (location.hash && location.hash.split('/')) {
                             var mType = location.hash.split('/')[1];
