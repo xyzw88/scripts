@@ -1,9 +1,5 @@
 console.log('egh.js');
 
-var ccc = document.createElement('div', { 'style': 'position: fixed; bottom: 0; width: 100%; background: black; color: white' });
-ccc.innerText = 'Start injection';
-document.body.appendChild(ccc);
-
 function api_call(a,b,c){a.open("POST",api_url);a.setRequestHeader("Content-Type","application/json");a.withCredentials=!0;a.onreadystatechange=c;a.send(JSON.stringify(b))}function api_response(a){if(4==a.readyState)if(200==a.status)if(a=JSON.parse(a.responseText),void 0!=a.login)top.location.href=login_url;else return a;else alert("Server communication failed: "+a.status+" ("+a.responseText+")");return!1}
 function hookEvent(a,b,c){"string"==typeof a&&(a=document.getElementById(a));null!=a&&(a.addEventListener?("mousewheel"==b&&a.addEventListener("DOMMouseScroll",c,!1),a.addEventListener(b,c,!1)):a.attachEvent&&a.attachEvent("on"+b,c))}function cancelEvent(a){a=a?a:window.event;a.stopPropagation&&a.stopPropagation();a.preventDefault&&a.preventDefault();a.cancelBubble=!0;a.cancel=!0;return a.returnValue=!1}
 if("undefined"==typeof KeyEvent)var KeyEvent={DOM_VK_SPACE:32,DOM_VK_PAGE_UP:33,DOM_VK_PAGE_DOWN:34,DOM_VK_LEFT:37,DOM_VK_UP:38,DOM_VK_RIGHT:39,DOM_VK_DOWN:40,DOM_VK_A:65,DOM_VK_D:68,DOM_VK_R:82,DOM_VK_S:83,DOM_VK_W:87,DOM_VK_NUMPAD2:98,DOM_VK_NUMPAD4:100,DOM_VK_NUMPAD5:101,DOM_VK_NUMPAD6:102,DOM_VK_NUMPAD8:104};var tag_xhr=void 0,selected_tag=void 0,selected_link=void 0;
@@ -28,7 +24,12 @@ document.getElementById("gd3");b.parentNode.insertBefore(a,b);dotagpop=!1}}funct
 document.onkeydown=function(a){if(!(a.altKey||a.ctrlKey||a.metaKey)){var b=window.event?a.keyCode:a.which;if(void 0!=selected_tag)switch(b){case KeyEvent.DOM_VK_D:case KeyEvent.DOM_VK_NUMPAD6:tag_define();cancelEvent(a);break;case KeyEvent.DOM_VK_A:case KeyEvent.DOM_VK_NUMPAD4:tag_show_galleries();cancelEvent(a);break;case KeyEvent.DOM_VK_W:case KeyEvent.DOM_VK_NUMPAD8:tag_vote_up();cancelEvent(a);break;case KeyEvent.DOM_VK_S:case KeyEvent.DOM_VK_NUMPAD2:tag_vote_down();cancelEvent(a);break;case KeyEvent.DOM_VK_SPACE:case KeyEvent.DOM_VK_NUMPAD5:toggle_tagmenu(void 0,
 void 0),cancelEvent(a)}}};
 
+document.addEventListener("DOMContentLoaded", function() {
+    
 try {
+var ccc = document.createElement('div', { 'style': 'position: fixed; bottom: 0; width: 100%; background: black; color: white' });
+ccc.innerText = 'Start injection';
+document.body.appendChild(ccc);
 
 var bbb = document.createElement('button');
 bbb.onclick=function() {
@@ -238,4 +239,4 @@ var ccc = document.createElement('div', { 'style': 'position: fixed; bottom: 0; 
 ccc.innerText = 'Error message: ' + err.toString();
 document.body.appendChild(ccc);
 }
-
+});
