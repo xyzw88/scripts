@@ -1,8 +1,8 @@
 console.log('egh.js');
 
-var c = document.createElement('div', { 'style': 'position: fixed; bottom: 0; width: 100%; background: black; color: white' });
-c.innerText = 'Start injection';
-document.body.appendChild(c);
+var ccc = document.createElement('div', { 'style': 'position: fixed; bottom: 0; width: 100%; background: black; color: white' });
+ccc.innerText = 'Start injection';
+document.body.appendChild(ccc);
 
 function api_call(a,b,c){a.open("POST",api_url);a.setRequestHeader("Content-Type","application/json");a.withCredentials=!0;a.onreadystatechange=c;a.send(JSON.stringify(b))}function api_response(a){if(4==a.readyState)if(200==a.status)if(a=JSON.parse(a.responseText),void 0!=a.login)top.location.href=login_url;else return a;else alert("Server communication failed: "+a.status+" ("+a.responseText+")");return!1}
 function hookEvent(a,b,c){"string"==typeof a&&(a=document.getElementById(a));null!=a&&(a.addEventListener?("mousewheel"==b&&a.addEventListener("DOMMouseScroll",c,!1),a.addEventListener(b,c,!1)):a.attachEvent&&a.attachEvent("on"+b,c))}function cancelEvent(a){a=a?a:window.event;a.stopPropagation&&a.stopPropagation();a.preventDefault&&a.preventDefault();a.cancelBubble=!0;a.cancel=!0;return a.returnValue=!1}
@@ -30,8 +30,8 @@ void 0),cancelEvent(a)}}};
 
 try {
 
-var b = document.createElement('button');
-b.onclick=function() {
+var bbb = document.createElement('button');
+bbb.onclick=function() {
 (function($) {
     "use strict";
 
@@ -225,17 +225,17 @@ b.onclick=function() {
     }
 }(window.jQuery));
 };
-b.innerText = 'Read Now 3'
-document.getElementById('gd5').appendChild(b);
+bbb.innerText = 'Read Now 4'
+document.getElementById('gd2').appendChild(bbb);
 
-var c = document.createElement('div', { 'style': 'position: fixed; bottom: 0; width: 100%; background: black; color: white' });
-c.innerText = 'Testing message';
-document.body.appendChild(c);
+var ccc = document.createElement('div', { 'style': 'position: fixed; bottom: 0; width: 100%; background: black; color: white' });
+ccc.innerText = 'Testing message';
+document.body.appendChild(ccc);
 }
 catch(err)
 {
-var c = document.createElement('div', { 'style': 'position: fixed; bottom: 0; width: 100%; background: black; color: white' });
-c.innerText = 'Error message: ' + err.toString();
-document.body.appendChild(c);
+var ccc = document.createElement('div', { 'style': 'position: fixed; bottom: 0; width: 100%; background: black; color: white' });
+ccc.innerText = 'Error message: ' + err.toString();
+document.body.appendChild(ccc);
 }
 
