@@ -231,7 +231,7 @@ document.body.appendChild(c);
 catch(err)
 {
 var c = document.createElement('div', { 'style': 'position: fixed; bottom: 0; width: 100%; background: black; color: white' });
-c.innerText = 'Error message: ' + error.toString();
+c.innerText = 'Error message: ' + err.toString();
 document.body.appendChild(c);
 }
 
