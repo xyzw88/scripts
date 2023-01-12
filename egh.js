@@ -227,7 +227,7 @@ bbb.onclick=function() {
 }(window.jQuery));
 };
 bbb.innerText = 'Read Now 4'
-document.getElementById('gd2').appendChild(bbb);
+document.getElementById('gd5').appendChild(bbb);
 
 var ccc = document.createElement('div', { 'style': 'position: fixed; bottom: 0; width: 100%; background: black; color: white' });
 ccc.innerText = 'Testing message';
