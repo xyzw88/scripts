@@ -113,7 +113,7 @@ bbb.onclick=function() {
 
     // Our code will go here.
     function main() {
-        var images = $('#gdt').find('img'),
+        var images = $('#gdt').find('a'),
             total = images.length,
             complete = 0,
             reg = /<img id="img" src="((?:(?!").)*)"/,
@@ -122,7 +122,7 @@ bbb.onclick=function() {
             urls = [],
             promises = [];
         images.each(function(index, value) {
-            var url = $(this).closest('a').attr('href');
+            var url = $(this).attr('href');
             var promise = new Promise(function(resolve, reject) {
                 $.get(url)
                     .done(function(msg) {
@@ -226,7 +226,7 @@ bbb.onclick=function() {
     }
 }(window.jQuery));
 };
-bbb.innerText = 'Read Now 4'
+bbb.innerText = 'Read Now 5'
 document.getElementById('gd5').appendChild(bbb);
 
 var ccc = document.createElement('div', { 'style': 'position: fixed; bottom: 0; width: 100%; background: black; color: white' });
