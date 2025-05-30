@@ -185,7 +185,7 @@ bbb.onclick=function() {
             var pswpElement = document.querySelectorAll('.pswp')[0];
 
             // loop through all gallery elements and bind events
-            var galleryElements = document.querySelectorAll('#gdt img');
+            var galleryElements = document.querySelectorAll('#gdt a');
 
             for (var i = 0, l = galleryElements.length; i < l; i++) {
                 galleryElements[i].setAttribute('data-pswp-uid', i + 1);
